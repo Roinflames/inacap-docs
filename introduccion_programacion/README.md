@@ -19,6 +19,8 @@ Semana 3
         Instrucción continue
         Instrucción else
 
+<b>No se podrá  Ingresar notas por el siguiente  motivo :</b></br> Nota insertada hace más de 48hrs.</br>
+
 Semana 4
 
 Semana 5
