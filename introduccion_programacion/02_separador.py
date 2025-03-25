@@ -1,2 +1,5 @@
-print("Manzanas", "Naranjas", "Plátanos", sep=", ", end=".\n")
+print("Manzanas", "Naranjas", "Plátanos", sep="; ", end=".\n")
+print("Manzanas", "Naranjas", "Plátanos", end=".\n")
+print("Manzanas", "Naranjas", "Plátanos")
+print("Manzanas", "Naranjas", "Plátanos")
 print("Esta es otra línea.")
