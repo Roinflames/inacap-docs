@@ -20,7 +20,7 @@ import pandas as pd
 
 # Validar argumento
 if len(sys.argv) < 2:
-    print("❌ Uso: python cargar_sqlite_seguro.py <archivo.csv>")
+    print("❌ Uso: python 03.py <archivo.csv>")
     exit(1)
 
 archivo_csv = sys.argv[1]
