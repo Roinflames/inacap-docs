@@ -1,0 +1,6 @@
+id,nombre,email,edad
+1,Ana,ana@email.com,18
+2,Luis,luis@EMAIL.COM,"18"
+3,Pedro, =cmd|' /C calc.exe'!A1,18
+4,,roberto@email.com,True
+cinco,Camila,camila@email.com,18
