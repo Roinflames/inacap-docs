@@ -17,3 +17,5 @@ if not columnas_esperadas.issubset(df.columns):
 
 # Limpieza de datos
 df["email"] = df["email"].str.strip().str.lower()
+
+print(df)

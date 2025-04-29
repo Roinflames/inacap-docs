@@ -14,7 +14,7 @@ Ejemplo básico de lectura de un archivo CSV:
 """
 import csv
 
-with open('usuarios.csv', newline='', encoding='utf-8') as archivo_csv:
+with open('datos_usuarios.csv', newline='', encoding='utf-8') as archivo_csv:
     lector = csv.reader(archivo_csv)
     for fila in lector:
         print(fila)
