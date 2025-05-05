@@ -7,9 +7,12 @@
 # - Nombre de alumno/docente/funcionario
 # - Fecha de préstamo
 # - Fecha de devolución  
+from datetime import datetime, timedelta
 titulos = ["Libro1","Libro2","Libro3"]
-disponibilidad = [True,False,True]
+disponibilidad = [True,True,True]
 nombre = ["","",""]
+fecha_prestamo = [datetime.now(),datetime.now(),datetime.now()]
+fecha_devolucion = [datetime.now(),datetime.now(),datetime.now()]
 
 def get_titulos():
     return titulos
@@ -17,29 +20,35 @@ def get_titulos():
 def get_disponibilidad():
     return disponibilidad
 
-def set_nombre():
-    pass
+def set_nombre(indice):
+    nombre[indice] = input("Ingrese nombre de quien solicitó el libro:\n")
 
-def set_fecha_prestamo():
-    pass
+def set_fecha_devolucion(indice):
+    for fecha in fecha_prestamo:
+        fecha_devolucion[indice] += timedelta(days=7)
 
-def set_fecha_devolucion():
-    pass
+def show_resultado(indice):
+    print(
+        "Solicitante: ", nombre[indice], ".\n" ,
+        "Libro solicitado: ", titulos[indice], ".\n" ,
+        "Fecha de prestamo: ", fecha_prestamo[indice], ".\n" ,
+        "Fecha de devolucion: ", fecha_devolucion[indice], ".\n" ,
+        )
 
 def solicitar_libro(libro_solicitado):
-    # consultar disponibilidad
-    print(get_titulos())
-    print(get_disponibilidad())
-    # Si el libro está disponible, realizar préstamo
-    if True: # libro_solicitado
-        print(set_nombre())
-        print(set_fecha_prestamo())
-        print(set_fecha_devolucion())
+    i=0
+    indice=None
 
-i=0
-for libro in titulos:
-    print(libro, disponibilidad[i])
-    i+=1
+    for libro in titulos:
+        if libro_solicitado == titulos[i]:
+            indice = i
+        print(libro, disponibilidad[i], indice)
+        i+=1
 
-libro_solicitado = input("Ingrese nombre de libro a solicitar")
+    if indice != None:
+        set_nombre(indice)
+        set_fecha_devolucion(indice)
+        show_resultado(indice)
+
+libro_solicitado = input("Ingrese nombre de libro a solicitar:\n")
 solicitar_libro(libro_solicitado)
