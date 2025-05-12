@@ -1,28 +1,28 @@
-SAMM
-Software Assurance Maturity Model
-Niveles de madurez 0 1 2 3
-Pilares fundamentales de SAMM: Integridad, confidencialidad y disponibilidad
-Organización que desarrolló SAMM: OWASP
+SAMM<br>
+Software Assurance Maturity Model<br>
+Niveles de madurez 0 1 2 3<br>
+Pilares fundamentales de SAMM: Integridad, confidencialidad y disponibilidad<br>
+Organización que desarrolló SAMM: OWASP<br>
 
-SDL
-Secure Development Lifecycle
-Creada por Microsoft
+SDL<br>
+Secure Development Lifecycle<br>
+Creada por Microsoft<br>
 
-Entrenamiento
-    Proporcionar capacitación en seguridad a los miembros del equipo.
+Entrenamiento<br>
+    Proporcionar capacitación en seguridad a los miembros del equipo.<br>
 
-Requisitos 
-    Identificar y documentar los requisitos de seguridad específicos del proyecto
+Requisitos <br>
+    Identificar y documentar los requisitos de seguridad específicos del proyecto<br>
     
-Diseño 
-    Utilización de patrones de diseño seguro.
+Diseño <br>
+    Utilización de patrones de diseño seguro.<br>
 
-Implementación 
-    Implementación segura
+Implementación <br>
+    Implementación segura<br>
 
 Verificación 
 
 Liberación 
 
-Respuesta 
+Respuesta <br>
     Prepararse para posibles incidentes de seguridad y responder de manera rápida y efectiva.
