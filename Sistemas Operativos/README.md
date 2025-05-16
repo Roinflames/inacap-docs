@@ -7,6 +7,10 @@ Direccionamiento de redes basada en protocolos TCP/IP.
 Interconexión de dispositivos y redes
 Acumulativa 1
 
+I. Interconexión de dispositivos y redes.
+II. Cálculo de clases de dirección.
+III. Técnicas de cálculo VLSM.
+
 Semana 2
 Cálculo de clases de dirección
 Acumulativa 2
