@@ -5,7 +5,7 @@ consistentes en modelos conceptual, lógico y relacional, la construcción de ba
 con sus correspondientes restricciones de integridad, la manipulación de datos mediante transacciones seguras y la consulta de datos básica 
 con Lenguaje de Consulta Estructurado (SQL), considerando la ética y la ciudadanía
 
-1 .Introducción a las bases de datos y arquitectura de un DBMS. 12
+UNIDAD 1 .Introducción a las bases de datos y arquitectura de un DBMS. 12
 
 1.1 Explica el uso de un Sistema de Gestión de Bases de Datos (DBMS), para su utilización como solución de software en un contexto organizacional, de acuerdo con las características de la industria de las TI y buenas prácticas de seguridad de datos.
 
@@ -21,7 +21,7 @@ Evolución de las bases de datos.
 Modelos de bases de datos (clave-valor, documental, de grafo, orientado a objetos, relacional).
 Arquitectura de los Sistemas Gestión de Base de Datos (DBMS) y aspectos de seguridad.
 
-2 .Modelamiento de bases de datos.	18
+UNIDAD 2 .Modelamiento de bases de datos.	18
 
 2.1 Crea un modelo relacional en Tercera Forma Normal (3FN), para reducir los problemas y anomalías en el almacenamiento de datos, considerando notaciones, convenciones y procedimientos establecidos e identificando las consecuencias de descuidar las necesidades de la organización y la buena práctica profesional.
 
@@ -37,7 +37,7 @@ Características del modelo lógico y notación de Barker.
 Elementos avanzados del modelo lógico: relaciones con identificación.
 Características del modelo relacional o físico y normalización.
 
-3 .Definición, manipulación y consulta de datos usando SQL.	24
+UNIDAD 3 .Definición, manipulación y consulta de datos usando SQL.	24
 
 3.1 Crea una base de datos con tablas, restricciones de integridad y datos de muestra, con el fin de proveer una solución completa a una necesidad organizacional de almacenamiento de datos, a partir de un caso de estudio, un modelo relacional y requerimientos de integridad referencial y seguridad.
 
