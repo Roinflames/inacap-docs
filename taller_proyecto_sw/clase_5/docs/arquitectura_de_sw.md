@@ -8,8 +8,28 @@ Incluye:
 - 🔁 **Relaciones**: Cómo se comunican los componentes entre sí.
 - 📐 **Decisiones arquitectónicas**: Elecciones técnicas y estratégicas, como el uso de patrones (MVC, capas, hexagonal), frameworks, bases de datos, etc.
 - 🎯 **Objetivos de calidad**: Rendimiento, escalabilidad, mantenibilidad, seguridad, etc.
-
+- **Estilos arquitectónicos**:
+  - Arquitectura en capas
+  - Cliente-servidor
+  - Microservicios
+  - Event-driven
+- **Patrones comunes**:
+  - MVC (Modelo-Vista-Controlador)
+  - Clean Architecture
+  - Hexagonal Architecture
+  
 > 💡 Ejemplo aplicado: En un sistema de gestión de turnos, la arquitectura define que existirá una API REST (backend), una app móvil (frontend) y una base de datos relacional (PostgreSQL), y cómo estos elementos interactúan.
+
+---
+
+## 🎯 Objetivos de la arquitectura
+
+- Establecer una **visión técnica común** del sistema
+- Asegurar que el software sea:
+  - Mantenible
+  - Escalable
+  - Reutilizable
+  - Seguro
 
 ---
 
