@@ -26,7 +26,7 @@ XP es una metodología ágil enfocada en mejorar la calidad del software y respo
 # 🛠 Ejemplo aplicado para los estudiantes
     "Supongamos que el equipo está desarrollando un módulo de agendamiento para su proyecto. Aplicando XP, podrían trabajar en parejas, escribir un test que verifique que una hora agendada no se duplique, y luego recién programar esa funcionalidad. Suben su avance a Git varias veces al día y hacen pruebas constantes. Eso es XP en acción."
 
-# 🎓 ¿Por qué incluir XP en tu taller?
+# 🎓 ¿Por qué incluir XP en Taller de Proyecto de Software?
     Refuerza disciplina técnica desde el inicio.
 
     Promueve un desarrollo colaborativo y de alta calidad.
