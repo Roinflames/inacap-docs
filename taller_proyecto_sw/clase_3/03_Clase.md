@@ -1,9 +1,9 @@
 ✅ Resumen Estructurado de la Unidad 2
 🧠 Aprendizaje Esperado
-2.1 Planifica el desarrollo del proyecto acorde a los requerimientos de negocio.
+2.1 **Planifica** el desarrollo del proyecto acorde a los requerimientos de negocio.
 (Integra la Competencia Genérica de Comunicación Oral y Escrita)
 
-🎯 Criterios de Evaluación
+🎯 **Criterios de Evaluación**
     Documentación del área de conocimiento: Alcance, riesgos, tiempos y costos.
     Estándares de calidad: Qué debe cumplir el proyecto.
     Aspectos de RRHH y adquisiciones.

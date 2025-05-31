@@ -34,7 +34,7 @@ Cómo ayudan a entender el problema antes de desarrollar software.
 
 Trabajo en grupo:
 
-Se les entrega un caso de negocio con problemas identificados.
+Se les entrega un **caso de negocio** con problemas identificados.
 
 Deben analizar el problema e identificar a los interesados.
 
@@ -46,7 +46,7 @@ Discusión en grupo sobre los aprendizajes del ejercicio.
 
 Preguntas y respuestas.
 
-Explicación de la siguiente clase: "Levantamiento de requerimientos".
+Explicación de la siguiente clase: **"Levantamiento de requerimientos".**
 
 #### Material de Apoyo
 

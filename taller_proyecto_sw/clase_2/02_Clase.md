@@ -2,7 +2,7 @@
 
 #### Objetivos de la Clase
 #### Definición de requerimientos y alcances
-Explicar cómo transformar la idea en requerimientos funcionales y no funcionales.
+Explicar cómo transformar la idea en **requerimientos funcionales y no funcionales**.
 
 Técnicas como user stories o casos de uso.
 
@@ -37,7 +37,7 @@ Cada grupo debe definir el problema con una frase clara y concisa.
 ## Creación de User Stories (20 min)
 Explicar qué son las user stories.
 
-Cada grupo escribe 3-5 historias de usuario para su problema.
+Cada grupo escribe 3-5 **historias de usuario** para su problema.
 
 ## Prototipado Rápido (30 min)
 Introducir herramientas como papel y lápiz o Figma.

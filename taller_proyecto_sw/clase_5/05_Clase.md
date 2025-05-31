@@ -20,7 +20,7 @@ Proyectos tradicionales vs Proyectos Ágiles
 ## Contenidos mínimos obligatorios
 - Definición y aplicación de metodologías ágiles: Scrum, XP, Kanban, Iweb.
 - [Definición de arquitectura de software.](docs/arquitectura_de_sw.md)
-- Utilización de normas y estándares de desarrollo, como ISO 9126, [27000](docs/iso_27000.md).
+- Utilización de normas y estándares de desarrollo, como [ISO 9126](docs/iso_9126.md), [ISO 27000](docs/iso_27000.md).
 - Gestión del cambio y control del versiones (VCS) con herramientas de apoyo.
 - Git, SVN, Github, Gitlab, Bitbucket, otros. 
 - Desarrollo de tareas acorde al ciclo de vida seleccionado: análisis, diseño, construcción y distinto tipo de pruebas.
