@@ -20,7 +20,7 @@
     Hub: Dispositivo obsoleto que reenvía datos a todos los puertos sin filtrado.
     Access Point: Punto de acceso inalámbrico a una red cableada.
 ## 1.2 Modelo OSI y TCP/IP
-- Capas y funciones
+- Capas y funciones Modelo OSI
     Aplicación
     Presentación
     Sesión
@@ -28,7 +28,7 @@
     Red
     Enlace de datos
     Física
-
+- Capas y funciones Modelo TCP/IP
     Aplicación
     Transporte
     Internet
