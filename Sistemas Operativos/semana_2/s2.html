@@ -1,0 +1,207 @@
+<p><strong>Red principal asignada:</strong> 192.168.100.0/24</p>
+<p>Clase C</p>
+<p>Máscara por defecto: 255.255.255.0 → /24</p>
+<p>Se requiere subdividir esta red en subredes para los siguientes departamentos:</p>
+
+<table style="width: 100%; border-collapse: collapse; border: 2px solid #333;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #333; padding: 0.5em; background-color: #f0f0f0;">Subred</th>
+      <th style="border: 1px solid #333; padding: 0.5em; background-color: #f0f0f0; text-align: center;">Nº de hosts requeridos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="border: 1px solid #333; padding: 0.5em;">Departamento A</td><td style="border: 1px solid #333; padding: 0.5em; text-align: center;">50</td></tr>
+    <tr><td style="border: 1px solid #333; padding: 0.5em;">Departamento B</td><td style="border: 1px solid #333; padding: 0.5em; text-align: center;">25</td></tr>
+    <tr><td style="border: 1px solid #333; padding: 0.5em;">Departamento C</td><td style="border: 1px solid #333; padding: 0.5em; text-align: center;">12</td></tr>
+    <tr><td style="border: 1px solid #333; padding: 0.5em;">Departamento D</td><td style="border: 1px solid #333; padding: 0.5em; text-align: center;">6</td></tr>
+    <tr><td style="border: 1px solid #333; padding: 0.5em;">Departamento E</td><td style="border: 1px solid #333; padding: 0.5em; text-align: center;">2</td></tr>
+  </tbody>
+</table>
+<hr>
+<h2>Paso 1: Ordenar subredes de mayor a menor</h2>
+<p>A (50), B (25), C (12), D (6), E (2)</p>
+
+<h2>Paso 2: Calcular bits necesarios para cada subred</h2>
+
+<p>Para calcular cuántos hosts se pueden asignar en una subred, usamos la fórmula:</p>
+
+<p style="font-size: 1.2em;"><strong>Hosts utilizables = 2<sup>n</sup> - 2</strong></p>
+
+<p>Se restan 2 direcciones porque:</p>
+<ul>
+  <li>Una se reserva para la <strong>dirección de red</strong></li>
+  <li>Otra para la <strong>dirección de broadcast</strong></li>
+</ul>
+
+<h4>Cálculos por subred:</h4>
+
+<table style="width: 100%; border-collapse: collapse; border: 2px solid #333;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #333; padding: 0.5em; background-color: #f0f0f0;">Subred</th>
+      <th style="border: 1px solid #333; padding: 0.5em; background-color: #f0f0f0;">Hosts requeridos</th>
+      <th style="border: 1px solid #333; padding: 0.5em; background-color: #f0f0f0;">Hosts disponibles</th>
+      <th style="border: 1px solid #333; padding: 0.5em; background-color: #f0f0f0;">Bits necesarios (n)</th>
+      <th style="border: 1px solid #333; padding: 0.5em; background-color: #f0f0f0;">Prefijo CIDR (32 bits - n)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #333; padding: 0.5em;">Departamento A</td>
+      <td style="border: 1px solid #333; padding: 0.5em; text-align: center;">50</td>
+      <td style="border: 1px solid #333; padding: 0.5em;">2⁶ - 2 = 62</td>
+      <td style="border: 1px solid #333; padding: 0.5em; text-align: center;">6</td>
+      <td style="border: 1px solid #333; padding: 0.5em;">/26</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333; padding: 0.5em;">Departamento B</td>
+      <td style="border: 1px solid #333; padding: 0.5em; text-align: center;">25</td>
+      <td style="border: 1px solid #333; padding: 0.5em;">2⁵ - 2 = 30</td>
+      <td style="border: 1px solid #333; padding: 0.5em; text-align: center;">5</td>
+      <td style="border: 1px solid #333; padding: 0.5em;">/27</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333; padding: 0.5em;">Departamento C</td>
+      <td style="border: 1px solid #333; padding: 0.5em; text-align: center;">12</td>
+      <td style="border: 1px solid #333; padding: 0.5em;">2⁴ - 2 = 14</td>
+      <td style="border: 1px solid #333; padding: 0.5em; text-align: center;">4</td>
+      <td style="border: 1px solid #333; padding: 0.5em;">/28</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333; padding: 0.5em;">Departamento D</td>
+      <td style="border: 1px solid #333; padding: 0.5em; text-align: center;">6</td>
+      <td style="border: 1px solid #333; padding: 0.5em;">2³ - 2 = 6</td>
+      <td style="border: 1px solid #333; padding: 0.5em; text-align: center;">3</td>
+      <td style="border: 1px solid #333; padding: 0.5em;">/29</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333; padding: 0.5em;">Departamento E</td>
+      <td style="border: 1px solid #333; padding: 0.5em; text-align: center;">2</td>
+      <td style="border: 1px solid #333; padding: 0.5em;">2² - 2 = 2</td>
+      <td style="border: 1px solid #333; padding: 0.5em; text-align: center;">2</td>
+      <td style="border: 1px solid #333; padding: 0.5em;">/30</td>
+    </tr>
+  </tbody>
+</table>
+<p><strong>Conclusión:</strong> con esta lógica puedes calcular el prefijo necesario para cualquier cantidad de hosts, asegurando que la red esté bien dimensionada.</p>
+
+<hr>
+
+<h2>3. Cálculo de la máscara de subred desde el prefijo CIDR</h2>
+
+<p>La máscara de subred se representa en formato decimal (IPv4) pero se basa en una cantidad de bits en 1 seguidos de bits en 0. Esto se indica con notación <strong>CIDR</strong> (por ejemplo, <code>/26</code> significa que los primeros 26 bits son 1).</p>
+<ul>
+    <li>Para 50 hosts necesito 6 bits (2 <sup>6</sup> = 64, menos red y broadcas 62 hosts máx.), por lo tanto el prefijo de subred del primer bloque sería /26 (8-6=2; 24+2=26)</li>
+    <li>Para 25 hosts necesito 5 bits (2 <sup>5</sup> = 32, menos red y broadcas 30 hosts máx.), por lo tanto el prefijo de subred del primer bloque sería /25 (8-5=3; 24+3=27)</li>
+    <li>Para 12 hosts necesito 4 bits (2 <sup>4</sup> = 16, menos red y broadcas 14 hosts máx.), por lo tanto el prefijo de subred del primer bloque sería /25 (8-4=4; 24+4=28)</li>
+    <li>Para 6 hosts necesito 3 bits (2 <sup>3</sup> = 8, menos red y broadcas 6 hosts máx.), por lo tanto el prefijo de subred del primer bloque sería /25 (8-3=5; 24+5=29)</li>
+    <li>Para 2 hosts necesito 2 bits (2 <sup>2</sup> = 4, menos red y broadcas 2 hosts máx.), por lo tanto el prefijo de subred del primer bloque sería /25 (8-2=6; 24+6=30)</li>
+</ul>
+
+<table style="border-collapse: collapse; border: 2px solid #000; width: 100%;">
+  <thead>
+    <tr style="background-color: #f2f2f2;">
+      <th style="border: 1px solid #000; padding: 0.5em;">CIDR</th>
+      <th style="border: 1px solid #000; padding: 0.5em;">Bits en binario</th>
+      <th style="border: 1px solid #000; padding: 0.5em;">Máscara binario</th>
+      <th style="border: 1px solid #000; padding: 0.5em;">Máscara decimal</th>
+      <th style="border: 1px solid #000; padding: 0.5em;">Hosts utilizables</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #000; padding: 0.5em;">/26</td>
+      <td style="border: 1px solid #000; padding: 0.5em;">26 unos + 6 ceros</td>
+      <td style="border: 1px solid #000; padding: 0.5em;">11111111.11111111.11111111.11000000</td>
+      <td style="border: 1px solid #000; padding: 0.5em;">255.255.255.192</td>
+      <td style="border: 1px solid #000; padding: 0.5em;">62</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 0.5em;">/27</td>
+      <td style="border: 1px solid #000; padding: 0.5em;">27 unos + 5 ceros</td>
+      <td style="border: 1px solid #000; padding: 0.5em;">11111111.11111111.11111111.11100000</td>
+      <td style="border: 1px solid #000; padding: 0.5em;">255.255.255.224</td>
+      <td style="border: 1px solid #000; padding: 0.5em;">30</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 0.5em;">/28</td>
+      <td style="border: 1px solid #000; padding: 0.5em;">28 unos + 4 ceros</td>
+      <td style="border: 1px solid #000; padding: 0.5em;">11111111.11111111.11111111.11110000</td>
+      <td style="border: 1px solid #000; padding: 0.5em;">255.255.255.240</td>
+      <td style="border: 1px solid #000; padding: 0.5em;">14</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 0.5em;">/29</td>
+      <td style="border: 1px solid #000; padding: 0.5em;">29 unos + 3 ceros</td>
+      <td style="border: 1px solid #000; padding: 0.5em;">11111111.11111111.11111111.11111000</td>
+      <td style="border: 1px solid #000; padding: 0.5em;">255.255.255.248</td>
+      <td style="border: 1px solid #000; padding: 0.5em;">6</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 0.5em;">/30</td>
+      <td style="border: 1px solid #000; padding: 0.5em;">30 unos + 2 ceros</td>
+      <td style="border: 1px solid #000; padding: 0.5em;">11111111.11111111.11111111.11111100</td>
+      <td style="border: 1px solid #000; padding: 0.5em;">255.255.255.252</td>
+      <td style="border: 1px solid #000; padding: 0.5em;">2</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Con esto puedes calcular fácilmente la máscara de subred a partir del CIDR, útil para planificar redes VLSM.</p>
+
+<h2>4. Asignación VLSM</h2>
+<table style="width: 100%; border-collapse: collapse; border: 2px solid #333;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #333; padding: 0.5em; background-color: #f0f0f0;">Subred</th>
+      <th style="border: 1px solid #333; padding: 0.5em; background-color: #f0f0f0;">Bloque asignado</th>
+      <th style="border: 1px solid #333; padding: 0.5em; background-color: #f0f0f0;">Máscara</th>
+      <th style="border: 1px solid #333; padding: 0.5em; background-color: #f0f0f0;">Rango de hosts válidos</th>
+      <th style="border: 1px solid #333; padding: 0.5em; background-color: #f0f0f0;">Dirección de broadcast</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #333; padding: 0.5em;"><strong>A (50)</strong></td>
+      <td style="border: 1px solid #333; padding: 0.5em;">192.168.100.0/26</td>
+      <td style="border: 1px solid #333; padding: 0.5em;">255.255.255.192 (/26)</td>
+      <td style="border: 1px solid #333; padding: 0.5em;">192.168.100.1 – 192.168.100.62</td>
+      <td style="border: 1px solid #333; padding: 0.5em;">192.168.100.63</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333; padding: 0.5em;"><strong>B (25)</strong></td>
+      <td style="border: 1px solid #333; padding: 0.5em;">192.168.100.64/27</td>
+      <td style="border: 1px solid #333; padding: 0.5em;">255.255.255.224 (/27)</td>
+      <td style="border: 1px solid #333; padding: 0.5em;">192.168.100.65 – 192.168.100.94</td>
+      <td style="border: 1px solid #333; padding: 0.5em;">192.168.100.95</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333; padding: 0.5em;"><strong>C (12)</strong></td>
+      <td style="border: 1px solid #333; padding: 0.5em;">192.168.100.96/28</td>
+      <td style="border: 1px solid #333; padding: 0.5em;">255.255.255.240 (/28)</td>
+      <td style="border: 1px solid #333; padding: 0.5em;">192.168.100.97 – 192.168.100.110</td>
+      <td style="border: 1px solid #333; padding: 0.5em;">192.168.100.111</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333; padding: 0.5em;"><strong>D (6)</strong></td>
+      <td style="border: 1px solid #333; padding: 0.5em;">192.168.100.112/29</td>
+      <td style="border: 1px solid #333; padding: 0.5em;">255.255.255.248 (/29)</td>
+      <td style="border: 1px solid #333; padding: 0.5em;">192.168.100.113 – 192.168.100.118</td>
+      <td style="border: 1px solid #333; padding: 0.5em;">192.168.100.119</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #333; padding: 0.5em;"><strong>E (2)</strong></td>
+      <td style="border: 1px solid #333; padding: 0.5em;">192.168.100.120/30</td>
+      <td style="border: 1px solid #333; padding: 0.5em;">255.255.255.252 (/30)</td>
+      <td style="border: 1px solid #333; padding: 0.5em;">192.168.100.121 – 192.168.100.122</td>
+      <td style="border: 1px solid #333; padding: 0.5em;">192.168.100.123</td>
+    </tr>
+  </tbody>
+</table>
+<hr>
+<h3>Nota</h3>
+<p>Después de asignar la subred E, el siguiente bloque libre disponible comenzaría en 192.168.100.124/30.</p>
+
+<h3>Resumen</h3>
+<p>El uso de VLSM permite asignar el espacio de direcciones de forma eficiente, maximizando el aprovechamiento y evitando desperdicios.</p>
