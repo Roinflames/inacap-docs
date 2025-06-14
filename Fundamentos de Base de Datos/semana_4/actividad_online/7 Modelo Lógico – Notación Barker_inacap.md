@@ -1,0 +1,15 @@
+# 2. Modelo Lógico – Notación Barker
+## Tablas principales:
+Carrera (PK: cod_carrera)
+Estudiante (PK: rut)
+EstudianteEnPractica (PK: rut, FK a Estudiante)
+    empresa_práctica, fecha_inicio, fecha_fin, rut_tutor (FK)
+Tutor (PK: id_tutor)
+EmpresaPractica (PK: rut_empresa)
+Docente (PK: rut_docente)
+Módulo (PK: cod_modulo, FK: cod_carrera, rut_docente)
+Sala (PK: cod_sala)
+Evaluación (PK: rut_estudiante, cod_modulo, fecha, tipo)
+ActividadExtracurricular (PK: id_actividad)
+Matricula (PK compuesta: rut_estudiante + cod_carrera)
+ParticipacionActividad (PK compuesta: rut_estudiante + id_actividad)
