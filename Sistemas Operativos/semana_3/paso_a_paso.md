@@ -19,10 +19,12 @@ aws ec2 describe-instances --instance-ids i-01a648647e18ae34b --query "Reservati
 6️⃣ ✅ Obtener la IP pública (34.229.7.169)
 aws ec2 describe-instances --instance-ids i-01a648647e18ae34b --query "Reservations[*].Instances[*].PublicIpAddress" --output text
 
-7️⃣ ✅ Obtener la contraseña del administrador
+7️⃣ Obtener la contraseña del administrador
+aws ec2 get-password-data --instance-id i-01a648647e18ae34b --priv-launch-key .\MiClaveWindowsNueva.pem --query PasswordData --output text
+aws ec2 get-password-data --instance-id i-01a648647e18ae34b --priv-launch-key .\MiClaveWindows2.pem --query PasswordData --output text
+
 $instanceId = "i-01a648647e18ae34b"
 $keyPath = ".\MiClaveWindowsNueva.pem"
-
 $base64 = aws ec2 get-password-data --instance-id $instanceId --priv-launch-key $keyPath --query PasswordData --output text
 
 if ($base64) {
@@ -39,8 +41,11 @@ Presiona Win + R y escribe mstsc y presiona Enter.
 En el campo Equipo, escribe la IP pública que obtuviste en el paso 1.
 Haz clic en Conectar.
 
-Usa la IP pública.
+Usa la IP pública:
 34.229.7.169
-Usuario: Administrator 
+
+Usuario: 
+Administrator 
+
 Contraseña: la que obtuviste en el paso anterior. 
 \x0a;6c0a6e67-73da-4f10-aa55-86b37bb21cb9
