@@ -9,22 +9,26 @@
 - Si recibe el mensaje “Las credenciales del enlace de inicio de sesión no son válidas. Contacte con su administrador.”, haga clic en la palabra “aquí” del error para cerrar la sesión y reiniciar el laboratorio. 
 
 # ✅ AWS CONFIGURE 
-C:\Users\Rodrigo>aws configure AWS Access Key ID [****************c.cl]: AKIAW64X3ENDW5MQAYJA AWS Secret Access Key [****************014.]: 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 Default region name [us-east-2]: us-east-1 Default output format [json]: 
+aws configure 
+AWS Access Key ID [****************c.cl]: AKIAW64X3ENDW5MQAYJA 
+AWS Secret Access Key [****************014.]: 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 
+Default region name [us-east-2]: us-east-1 
+Default output format [json]: 
 
 # ✅ Ver listado de AMI 
 aws ec2 describe-images  --owners amazon  --filters "Name=name,Values=Windows_Server-2022-English-Full-Base-*"  "Name=platform,Values=windows"  --query "Images[*].[ImageId,Name]"  --output table 
 
 # ✅ Crear el grupo de seguridad 
 aws ec2 create-security-group ^ 
-
   --group-name WindowsSG ^ 
-
   --description "Permitir RDP para Windows Server" ^ 
-
   --vpc-id vpc-0f7e8f633c1f01538 
 
 # ✅ Crear un nuevo par de claves
 aws ec2 create-key-pair --key-name MiClaveWindows --query 'KeyMaterial' --output text > MiClaveWindows.pem
+
+# Decodificar contraseña en PowerShell sin usar base64
+$base64 = aws ec2 get-password-data --instance-id i-0266a97a0c701a232 --priv-launch-key .\MiClaveWindows2.pem --query PasswordData --output text [System.Text.Encoding]::Unicode.GetString([System.Convert]::FromBase64String($base64))
 
 # ❌ Abrir el puerto RDP (3389) desde tu IP pública 
 aws ec2 authorize-security-group-ingress ^ 
@@ -54,18 +58,18 @@ aws ec2 run-instances ^
   --security-group-ids sg-0a2991d36ea558353 ^
   --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=WindowsServerCLI}]"
 
-# Obtén la IP pública de tu instancia (necesaria para RDP): 44.203.162.184
+# ✅ Obtén la IP pública de tu instancia (necesaria para RDP): 44.203.162.184
 aws ec2 describe-instances --instance-ids i-0266a97a0c701a232 --query "Reservations[*].Instances[*].PublicIpAddress" --output text
 
-# Obtén la contraseña del usuario administrador (Administrator)
+# ❌ Obtén la contraseña del usuario administrador (Administrator)
 aws ec2 get-password-data --instance-id i-0266a97a0c701a232 --priv-launch-key MiClaveWindows.pem --query PasswordData --output text | base64 --decode > password.txt
 
-# Conéctate por RDP
+# ❌ Conéctate por RDP
 Usuario: Administrator
 IP: la IP pública obtenida (44.203.162.184)
 Contraseña: la que obtuviste en password.txt
 
-#   Verifica que tu instancia está en estado running
+# ❌ Verifica que tu instancia está en estado running
 aws ec2 describe-instances --instance-ids i-0266a97a0c701a232 --query "Reservations[*].Instances[*].State.Name" --output text
 
-# Confirma que usas la clave privada correcta y sin modificar
+# ❌ Confirma que usas la clave privada correcta y sin modificar
