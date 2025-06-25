@@ -8,6 +8,6 @@ ec2 describe-instances --query "Reservations[*].Instances[*].[InstanceId,State.N
 |  i-0266a97a0c701a232|  running |  t3.medium |  MiClaveWindows      |  WindowsServerCLI  |  44.203.162.184  |
 |  i-057ed7393f0ad5e1e|  running |  t3.medium |  MiClaveWindowsNueva |  WindowsServerCLI  |  35.170.245.117  |
 +---------------------+----------+------------+----------------------+--------------------+------------------+
+(i-0031758c6811ff3c1
 
-
-aws ec2 get-password-data --instance-id i-01a648647e18ae34b --priv-launch-key .\labsuser.pem --query PasswordData --output text
+aws ec2 get-password-data --instance-id i-0031758c6811ff3c1 --priv-launch-key .\MiClaveWindows2.pem --query PasswordData --output text
