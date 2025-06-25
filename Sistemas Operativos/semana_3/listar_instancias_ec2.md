@@ -11,3 +11,5 @@ ec2 describe-instances --query "Reservations[*].Instances[*].[InstanceId,State.N
 (i-0031758c6811ff3c1
 
 aws ec2 get-password-data --instance-id i-0031758c6811ff3c1 --priv-launch-key .\MiClaveWindows2.pem --query PasswordData --output text
+
+aws ec2 get-password-data --instance-id i-0031758c6811ff3c1 --priv-launch-key "C:\Projects\inacap\MiClaveWindows2.pem" --query PasswordData --output text
