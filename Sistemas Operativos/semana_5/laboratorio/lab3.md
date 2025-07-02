@@ -23,11 +23,18 @@ En el Server:
 - Después de instalar AD DS 
 - Haz clic en la bandera amarilla.
 - Abrir notificación "Promote this server to a domain controller".
+
+![alt text](promote.png)
+
 Elegir:
 - Agregar nuevo bosque
 - Dominio raíz: midominio.local
-- Establecer contraseña de recuperación DSRM.
-- Completar instalación y reiniciar.
+- Establecer contraseña de recuperación DSRM. (rY$!cKLLeHKfL@?;q4iwQw%CxCEFTu-v)
+- Completar instalación y reiniciar. (Se hace de forma automática después de presionar "Install")
+
+![alt text](prerequisites.png)
+![alt text](conexiondominio.png)
+
 ### 2. Configurar IP fija en ambas máquinas
 Asegúrate de:
 - Windows Server tenga IP fija y sea servidor DNS.
