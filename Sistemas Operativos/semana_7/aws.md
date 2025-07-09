@@ -16,7 +16,7 @@ Objetivos del día.
 - Comandos: chmod, chown, chgrp
 - Tipos de permisos: lectura, escritura, ejecución.
 - Permisos numéricos vs simbólicos (chmod 755 archivo, chmod u+x script.sh).
-## 5. Evaluación Acumulativa 8 (9:30 – 10:00)
+## 5. Evaluación Acumulativa 7 (9:30 – 10:00)
 - Desafío práctico: entregar una lista de comandos ejecutados + estructura final.
 - Comprobación del conocimiento con un test corto.
 ## 6. Cierre (10:00 – 10:30)
