@@ -84,8 +84,16 @@ Casos reales: elegir software y analizar su licencia.
 - Verificar la distribución y versión del sistema operativo.
 - Consultar la licencia del software instalado (cat /etc/*release, man, etc.).
 - Investigar qué herramientas GNU vienen instaladas y su tipo de licencia.
-# 5. Evaluación Acumulativa 6 (9:45 – 10:15)
+## 5. Evaluación Acumulativa 6 (9:45 – 10:15)
 - Breve cuestionario en línea.
-# 6. Cierre (10:15 – 10:30)
+## 6. Cierre (10:15 – 10:30)
 - Revisión de aprendizajes clave.
 - Introducción a la siguiente clase: gestión de archivos y directorios en Linux.
+
+# Material de apoyo sugerido
+- Sitio oficial GNU: https://www.gnu.org/licenses/
+- Sitio Open Source Initiative (OSI): https://opensource.org/licenses
+
+- Videos sugeridos:
+- "Tipos de licencias de software" (YouTube - canal Código Facilito)
+- "¿Qué es una licencia GPL?" (YouTube - canal Free Software Foundation)
