@@ -7,6 +7,8 @@
 🔍 Ejemplos útiles (Kaggle + otros):
     📊 Titanic - Machine Learning from Disaster (Supervisado) [Link](https://www.kaggle.com/competitions/titanic)
     🎨 Clustering de dígitos con K-Means (No supervisado) [Link]()
+        Otros ejemplos:
+        https://www.kaggle.com/competitions/c-5-segmentacion-de-clientes-con-k-means
         https://www.kaggle.com/code/richardpadilla01/clustering-usando-kmeans
         https://www.kaggle.com/code/fernandobordi/fb-clusters-k-means
         https://www.kaggle.com/code/begoaescrigandrs/an-lisis-de-datos-en-python-algoritmo-k-means/code
