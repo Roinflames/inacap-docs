@@ -4,10 +4,14 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+gymnasium = "*"
 scikit-learn = "*"
 seaborn = "*"
 pandas = "*"
 tqdm = "*"
+torch = "*"
+torchvision = "*"
+torchaudio = "*"
 
 [dev-packages]
 

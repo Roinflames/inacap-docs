@@ -14,7 +14,9 @@
         https://www.kaggle.com/code/begoaescrigandrs/an-lisis-de-datos-en-python-algoritmo-k-means/code
         https://medium.com/@robertb909/k-means-clustering-a64f859a1074
 
-    🧠 OpenAI Gym para ejemplos de aprendizaje por refuerzos (Reinforcement Learning)
+    🧠 OpenAI Gym para ejemplos de aprendizaje por refuerzos (Reinforcement Learning) [Link](https://www.toolify.ai/es/ai-news-es/7-aprendizaje-por-refuerzo-con-openai-gym-y-tensorflow-tutorial-994503)
+        Otros ejemplos:
+        https://www.kaggle.com/competitions/assignment-4-204725
 
 📚 Recurso adicional:
     Curso de Machine Learning con Python de Scikit-learn
