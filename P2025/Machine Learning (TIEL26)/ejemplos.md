@@ -1,5 +1,3 @@
-https://chatgpt.com/c/68939dd4-beec-8329-9695-5c51dbcafe99
-
 🔹 Unidad 1: Introducción al Machine Learning
 ✅ Conceptos clave:
     Supervisado / No supervisado / Reforzamiento
@@ -8,7 +6,12 @@ https://chatgpt.com/c/68939dd4-beec-8329-9695-5c51dbcafe99
 
 🔍 Ejemplos útiles (Kaggle + otros):
     📊 Titanic - Machine Learning from Disaster (Supervisado) [Link](https://www.kaggle.com/competitions/titanic)
-    🎨 Clustering de dígitos con K-Means (No supervisado)
+    🎨 Clustering de dígitos con K-Means (No supervisado) [Link]()
+        https://www.kaggle.com/code/richardpadilla01/clustering-usando-kmeans
+        https://www.kaggle.com/code/fernandobordi/fb-clusters-k-means
+        https://www.kaggle.com/code/begoaescrigandrs/an-lisis-de-datos-en-python-algoritmo-k-means/code
+        https://medium.com/@robertb909/k-means-clustering-a64f859a1074
+
     🧠 OpenAI Gym para ejemplos de aprendizaje por refuerzos (Reinforcement Learning)
 
 📚 Recurso adicional:
