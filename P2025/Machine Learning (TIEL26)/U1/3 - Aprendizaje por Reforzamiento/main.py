@@ -1,3 +1,8 @@
+'''
+Aprendizaje por refuerzos (RL)
+Entrenamiento
+Python y Machine Learning
+'''
 import gymnasium as gym
 
 class Agent:

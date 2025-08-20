@@ -1,9 +1,13 @@
 # 1. Introducción al machine learning. 
 1.1 Explica los conceptos básicos del machine learning, describiendo las diferencias entre aprendizaje supervisado, no supervisado y aprendizaje
-por refuerzos.
+por refuerzos. 
 1.1.1 Identifica los tipos de aprendizajes automáticos existentes.
-1.1.2 Identifica los pasos necesarios para entrenar una solución basada en aprendizaje supervisado.
-1.1.3 Identifica los pasos necesarios para entrenar una red neuronal.
+    [Definición](https://www.ibm.com/es-es/think/topics/machine-learning-types)
+1.1.2 Identifica los pasos necesarios para entrenar una solución basada en aprendizaje supervisado. 
+    [Definición](https://www.ibm.com/es-es/think/topics/supervised-learning)
+1.1.3 Identifica los pasos necesarios para entrenar una red neuronal. 
+    [Definición](https://www.ibm.com/es-es/think/topics/neural-networks)
+    [Ejercicios Interactivos](https://developers.google.com/machine-learning/crash-course/neural-networks/interactive-exercises?hl=es-419)
 1.1.4 Asocia el tipo de aprendizaje necesario para un problema en específico.
 
 Concepto de: 

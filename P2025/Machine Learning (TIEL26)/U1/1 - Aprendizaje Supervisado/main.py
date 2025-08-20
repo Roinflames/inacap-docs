@@ -1,3 +1,8 @@
+'''
+Aprendizaje supervisado
+Entrenamiento
+Python y Machine Learning
+'''
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 
