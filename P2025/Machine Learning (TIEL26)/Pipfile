@@ -12,6 +12,8 @@ tqdm = "*"
 torch = "*"
 torchvision = "*"
 torchaudio = "*"
+sagemaker = "*"
+boto3 = "*"
 
 [dev-packages]
 
