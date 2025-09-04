@@ -1,51 +1,68 @@
-'''
-Aprendizaje no supervisado
-Entrenamiento
-Python y Machine Learning
-'''
 import pandas as pd
+import numpy as np
 from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
-import numpy as np
+import os
 
-# 1️⃣ Cargar datos
-df = pd.read_csv("customer_segmentation.csv")
+# --- Constantes ---
+SCRIPT_DIR = os.path.dirname(__file__)
+DATA_FILE_PATH = os.path.join(SCRIPT_DIR, "customer_segmentation.csv")
+SUBMISSION_FILE_PATH = os.path.join(SCRIPT_DIR, "submission.csv")
+FEATURES = ["purchase_frequency", "average_purchase", "loyalty_points", "months_active"]
 
-# Variables para clustering
-features = ["purchase_frequency", "average_purchase", "loyalty_points", "months_active"]
 
-X = df[features].values
+def load_data(path):
+    print("Paso 1: Cargando datos...")
+    return pd.read_csv(path)
 
-# 2️⃣ Estandarizar variables
-scaler = StandardScaler()
-X_scaled = scaler.fit_transform(X)
 
-# 3️⃣ Entrenar K-means
-k = 3  # Cambia si quieres probar otro valor
-kmeans = KMeans(n_clusters=k, random_state=42)
-labels = kmeans.fit_predict(X_scaled)
+def preprocess_data(df):
+    print("Paso 2: Escalando datos...")
+    X = df[FEATURES].values
+    scaler = StandardScaler()
+    return scaler.fit_transform(X)
 
-# 4️⃣ Calcular métricas
-inertia = kmeans.inertia_
-sil_score = silhouette_score(X_scaled, labels)
 
-# 5️⃣ Obtener tamaños y centroides
-sizes = np.bincount(labels)
-centroids = kmeans.cluster_centers_
+def train_kmeans(X, k=3):
+    print(f"Paso 3: Entrenando KMeans con k={k}...")
+    kmeans = KMeans(n_clusters=k, random_state=42)
+    labels = kmeans.fit_predict(X)
+    return kmeans, labels
 
-# 6️⃣ Crear salida en formato requerido (usando solo 2 primeras dimensiones como en tu ejemplo)
-rows = []
-for i in range(k):
-    rows.append([f"cluster{i}_center_x", round(centroids[i, 0], 2)])  # primera variable estandarizada
-    rows.append([f"cluster{i}_center_y", round(centroids[i, 1], 2)])  # segunda variable estandarizada
 
-rows.append(["inertia", round(inertia, 2)])
-rows.append(["silhouette_score", round(sil_score, 2)])
-for i in range(k):
-    rows.append([f"cluster{i}_size", float(sizes[i])])
+def evaluate_model(X, labels, kmeans):
+    print("Paso 4: Evaluando modelo...")
+    inertia = kmeans.inertia_
+    sil_score = silhouette_score(X, labels) if len(set(labels)) > 1 else None
+    return inertia, sil_score
 
-# 7️⃣ Exportar CSV
-df_out = pd.DataFrame(rows, columns=["ID", "value"])
-df_out.to_csv("submission.csv", index=False)
-print("✅ Archivo 'submission.csv' generado con éxito.")
+
+def export_results(kmeans, labels, inertia, sil_score, path):
+    print("Paso 5: Exportando resultados...")
+    rows = []
+    sizes = np.bincount(labels)
+    for i, centroid in enumerate(kmeans.cluster_centers_):
+        for j, val in enumerate(centroid):
+            rows.append([f"cluster{i}_center_{FEATURES[j]}", round(val, 2)])
+        rows.append([f"cluster{i}_size", float(sizes[i])])
+
+    rows.append(["inertia", round(inertia, 2)])
+    if sil_score is not None:
+        rows.append(["silhouette_score", round(sil_score, 2)])
+
+    df_out = pd.DataFrame(rows, columns=["ID", "value"])
+    df_out.to_csv(path, index=False)
+    print(f"✅ Archivo '{path}' generado con éxito.")
+
+
+def main():
+    df = load_data(DATA_FILE_PATH)
+    X_scaled = preprocess_data(df)
+    kmeans, labels = train_kmeans(X_scaled, k=3)
+    inertia, sil_score = evaluate_model(X_scaled, labels, kmeans)
+    export_results(kmeans, labels, inertia, sil_score, SUBMISSION_FILE_PATH)
+
+
+if __name__ == "__main__":
+    main()
