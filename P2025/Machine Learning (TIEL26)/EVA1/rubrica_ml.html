@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rúbrica de Evaluación – Informe de Entrenamiento de Modelo de ML</title>
+  <style>
+    :root{
+      --bg:#ffffff;
+      --ink:#111827;
+      --muted:#6b7280;
+      --primary:#1f2937;
+      --accent:#2563eb;
+      --border:#e5e7eb;
+      --table-stripe:#f9fafb;
+      --highlight:#eef2ff;
+    }
+    *{box-sizing:border-box}
+    body{
+      font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
+      line-height:1.6;
+      color:var(--ink);
+      background:var(--bg);
+      margin:0;
+      padding:32px;
+    }
+    .wrap{
+      max-width: 1000px;
+      margin: 0 auto;
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:28px;
+      box-shadow: 0 10px 25px rgba(0,0,0,.04);
+    }
+    header h1{
+      margin:0 0 8px 0;
+      font-size: clamp(22px, 2.6vw, 32px);
+      line-height:1.2;
+      color:var(--primary);
+      letter-spacing: -0.01em;
+    }
+    .meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px 24px;
+      color:var(--muted);
+      font-size:14px;
+      margin-bottom: 18px;
+    }
+    .meta span{white-space:nowrap}
+    .badge{
+      display:inline-block;
+      padding:2px 10px;
+      font-size:12px;
+      border-radius:999px;
+      background:var(--highlight);
+      color:#3730a3;
+      border:1px solid #e0e7ff;
+      margin-left:6px;
+    }
+    h2{
+      font-size: clamp(18px, 2.2vw, 24px);
+      margin: 26px 0 10px;
+      color:var(--primary);
+    }
+    table{
+      width:100%;
+      border-collapse:separate;
+      border-spacing:0;
+      border:1px solid var(--border);
+      border-radius:12px;
+      overflow:hidden;
+      font-size: 15px;
+    }
+    thead th{
+      background: var(--highlight);
+      color:#1e293b;
+      text-align:left;
+      padding:12px 14px;
+      border-bottom:1px solid var(--border);
+    }
+    tbody td{
+      padding:12px 14px;
+      vertical-align:top;
+      border-bottom:1px solid var(--border);
+    }
+    tbody tr:nth-child(odd) td{
+      background: var(--table-stripe);
+    }
+    tbody tr:last-child td{
+      border-bottom:none;
+    }
+    .crit{
+      width: 24%;
+      font-weight:600;
+      color:#111827;
+    }
+    .col{
+      width: 19%;
+    }
+    .small{
+      font-size:13px;
+      color:var(--muted);
+    }
+    .scale{
+      display:grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap:12px;
+      margin-top:12px;
+    }
+    .card{
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:14px;
+      background:#fff;
+    }
+    .card h3{
+      margin:0 0 6px;
+      font-size:16px;
+      color:#111827;
+    }
+    .card p{margin:0;font-size:14px;color:var(--muted)}
+    footer{
+      margin-top:20px;
+      font-size:12px;
+      color:var(--muted);
+    }
+    @media print {
+      body{padding:0;background:#fff}
+      .wrap{box-shadow:none;border: none;border-radius:0;padding:0}
+      .badge{border:1px solid #c7d2fe}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Rúbrica de Evaluación – Informe de Entrenamiento de Modelo de ML</h1>
+      <div class="meta">
+        <span><strong>Curso:</strong> Machine Learning (TIEL26)</span>
+        <span><strong>Actividad:</strong> Informe grupal (duplas) – Entrenamiento de modelo de ML para clasificación</span>
+        <span><strong>Ponderación:</strong> 15% <span class="badge">Instrumento sumativo</span></span>
+      </div>
+    </header>
+
+    <h2>📊 Criterios de Evaluación</h2>
+    <table aria-describedby="tabla-criterios">
+      <thead>
+        <tr>
+          <th class="crit">Criterio</th>
+          <th class="col">Excelente (100%)</th>
+          <th class="col">Bueno (75%)</th>
+          <th class="col">Suficiente (50%)</th>
+          <th class="col">Insuficiente (25%)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="crit">1. Tipos de Aprendizaje Automático (RA 1.1.1)</td>
+          <td>Identifica y explica claramente los tres tipos de aprendizaje (supervisado, no supervisado, refuerzo), con ejemplos.</td>
+          <td>Identifica los tres tipos, con explicación básica.</td>
+          <td>Identifica solo uno o dos tipos, con explicación incompleta.</td>
+          <td>No identifica correctamente los tipos.</td>
+        </tr>
+        <tr>
+          <td class="crit">2. Pasos del Aprendizaje Supervisado (RA 1.1.2)</td>
+          <td>Describe en orden y con detalle todas las etapas: carga de datos, preparación, entrenamiento, validación, evaluación.</td>
+          <td>Describe la mayoría de las etapas con claridad.</td>
+          <td>Describe parcialmente las etapas o las confunde.</td>
+          <td>No describe correctamente los pasos.</td>
+        </tr>
+        <tr>
+          <td class="crit">3. Pasos para Entrenar el Modelo (RA 1.1.3)</td>
+          <td>Explica con claridad los pasos específicos del modelo utilizado (XGBoost o red neuronal): definición de hiperparámetros, entrenamiento, métricas. Incluye evidencia del notebook.</td>
+          <td>Explica los pasos generales con evidencia parcial.</td>
+          <td>Menciona los pasos sin suficiente detalle ni evidencia.</td>
+          <td>No explica los pasos o carece de evidencia.</td>
+        </tr>
+        <tr>
+          <td class="crit">4. Asociación del Problema con el Tipo de Aprendizaje (RA 1.1.4)</td>
+          <td>Justifica correctamente por qué el problema es supervisado y qué algoritmo se utilizó.</td>
+          <td>Relaciona el problema con el tipo de aprendizaje, con justificación básica.</td>
+          <td>Menciona el tipo de aprendizaje sin justificación.</td>
+          <td>No relaciona el problema con el tipo de aprendizaje.</td>
+        </tr>
+        <tr>
+          <td class="crit">5. Presentación y Evidencia</td>
+          <td>Informe bien estructurado (portada, introducción, desarrollo, conclusiones), con capturas de pantalla claras y análisis propio.</td>
+          <td>Informe con estructura básica y algunas capturas, análisis limitado.</td>
+          <td>Informe incompleto, con poca evidencia.</td>
+          <td>Informe desordenado, sin capturas ni análisis.</td>
+        </tr>
+        <tr>
+          <td class="crit">6. Investigación Complementaria: Redes Neuronales</td>
+          <td>Explica con sus propias palabras qué son las redes neuronales, cómo funcionan y en qué casos se aplican mejor que XGBoost. Incluye un ejemplo investigado (no necesariamente implementado).</td>
+          <td>Describe qué son las redes neuronales con explicación general y un ejemplo básico.</td>
+          <td>Menciona redes neuronales pero sin explicación ni ejemplo claro.</td>
+          <td>No incluye investigación sobre redes neuronales.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>🔎 Escala de evaluación</h2>
+    <div class="scale">
+      <div class="card">
+        <h3>Excelente</h3>
+        <p>90 – 100%</p>
+      </div>
+      <div class="card">
+        <h3>Bueno</h3>
+        <p>75 – 89%</p>
+      </div>
+      <div class="card">
+        <h3>Suficiente</h3>
+        <p>60 – 74%</p>
+      </div>
+      <div class="card">
+        <h3>Insuficiente</h3>
+        <p>&lt; 60%</p>
+      </div>
+    </div>
+
+    <footer>
+      <p class="small">Sugerencia: Adjuntar como anexos capturas del notebook (celdas clave) y un enlace al repositorio con instrucciones de ejecución.</p>
+    </footer>
+  </div>
+</body>
+</html>

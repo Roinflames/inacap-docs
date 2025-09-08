@@ -1,5 +1,5 @@
-🔑 Guía para decidir qué tipo de aprendizaje usar
-1️⃣ Aprendizaje Supervisado
+# 🔑 Guía para decidir qué tipo de aprendizaje usar
+## 1️⃣ Aprendizaje Supervisado
 
 Cuándo usarlo:
 
@@ -15,7 +15,7 @@ Regresión: predecir el precio de una casa.
 
 👉 Necesario cuando sabes la respuesta correcta en tus datos históricos.
 
-2️⃣ Aprendizaje No Supervisado
+## 2️⃣ Aprendizaje No Supervisado
 
 Cuándo usarlo:
 
@@ -31,7 +31,7 @@ Reducción de dimensionalidad (PCA) para visualizar datos.
 
 👉 Necesario cuando no sabes la respuesta correcta, pero buscas estructura en los datos.
 
-3️⃣ Aprendizaje por Refuerzo
+## 3️⃣ Aprendizaje por Refuerzo
 
 Cuándo usarlo:
 
