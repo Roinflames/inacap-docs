@@ -17,8 +17,6 @@ Calcular la media y desviación estándar.
 
 Calcular el valor estandarizado con:
 
-Copiar
-Editar
 (Valor - Media) / DesviaciónEstándar
 Guardar esos datos estandarizados en nuevas columnas (por ejemplo, F a I).
 
@@ -39,9 +37,6 @@ En cada fila de datos de clientes:
 
 Calcular la distancia euclidiana a cada centroide:
 
-ini
-Copiar
-Editar
 Distancia = RAIZ( (X1 - Centroide1)^2 + (X2 - Centroide2)^2 + ... )
 Asignar el cliente al cluster con menor distancia (usando =MIN y =COINCIDIR).
 
@@ -91,9 +86,6 @@ El k con mejor balance suele ser el elegido.
 6️⃣ Formar el CSV de submission
 Poner en una columna todos los pares ID,value en el orden requerido:
 
-php-template
-Copiar
-Editar
 cluster0_center_x,<valor>
 cluster0_center_y,<valor>
 cluster1_center_x,<valor>
