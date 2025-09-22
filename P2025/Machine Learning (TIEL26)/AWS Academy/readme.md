@@ -6,7 +6,7 @@ Sección 3 - Proceso de aprendizaje automático
 Sección 4: Introducción a las herramientas de aprendizaje automático
 Sección 5: Desafíos de aprendizaje automático
 # Módulo 3 — Implementación de una canalización de aprendizaje automático con Amazon SageMaker
-
+[Enlace: ARFF](https://filext.com/es/extension-de-archivo/ARFF)
 # Módulo 4 — Introducción de la previsión
 # Módulo 5 — Introducción de la visión por computadora (CV)
 # Módulo 6 — Introducción del procesamiento del lenguaje natural

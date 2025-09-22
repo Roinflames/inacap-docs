@@ -14,6 +14,7 @@ torchvision = "*"
 torchaudio = "*"
 sagemaker = "*"
 boto3 = "*"
+requests = "*"
 
 [dev-packages]
 
