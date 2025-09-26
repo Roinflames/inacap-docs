@@ -1,1 +1,0 @@
-[Presentación 1](https://gamma.app/docs/Machine-Learning-29s3a6rk8ydher6)
