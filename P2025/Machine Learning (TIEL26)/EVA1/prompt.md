@@ -28,3 +28,9 @@ Resumen y Nota Propuesta:
 El informe funciona más como una bitácora de un intento fallido de completar el laboratorio que como un informe de resultados. El alumno fue proactivo al intentar un proyecto alternativo, pero el resultado final es incompleto y no cumple con la mayoría de los criterios de la rúbrica. Se valora la honestidad al reportar los problemas.
 
 * Puntaje Propuesto: 50% (Suficiente)
+
+---
+
+#### Informe 4:
+
+* Puntaje Propuesto: 83% (Bueno)
