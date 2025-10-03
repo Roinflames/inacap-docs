@@ -1,3 +1,4 @@
+[Presentación](https://gamma.app/docs/Aumento-de-Datos-en-Machine-Learning-u461fpkm89uiw7q?mode=doc)
 # Tarea 2: Aumento de Datos (Data Augmentation)
 
 ## ¿Qué es el Aumento de Datos?
@@ -35,7 +36,7 @@ A partir de una única imagen de un perro, podemos generar múltiples variantes:
 
 *Imagen Original* → *Rotada 15°* → *Con Zoom* → *Volteada Horizontalmente*
 
-![Ejemplo de Aumento de Datos](https://i.imgur.com/T8fXf3p.png) *(Referencia del notebook `ejemplo_aumento_datos.ipynb`)*
+![Ejemplo de Aumento de Datos](image/2_Aumento_de_datos/1759521342522.png)
 
 ### Para Texto:
 

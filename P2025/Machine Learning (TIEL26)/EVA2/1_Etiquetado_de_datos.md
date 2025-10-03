@@ -1,3 +1,4 @@
+[Presentación](https://gamma.app/docs/Etiquetado-de-Datos-en-Machine-Learning-1es46fy2bdog4fx?mode=doc)
 # Tarea 1: Etiquetado de Datos
 
 ## ¿Qué es el Etiquetado de Datos?
