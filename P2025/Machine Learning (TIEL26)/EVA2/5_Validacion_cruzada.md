@@ -1,3 +1,4 @@
+[Presentación](https://gamma.app/docs/Validacion-Cruzada-Cross-Validation-i6bn0u3vgntzo3j?mode=doc)
 # Tarea 5: Validación Cruzada (Cross-Validation)
 
 ## ¿Qué es la Validación Cruzada?

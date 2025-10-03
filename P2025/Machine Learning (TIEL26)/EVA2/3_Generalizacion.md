@@ -1,3 +1,4 @@
+[Presentación](https://gamma.app/docs/Generalizacion-en-Machine-Learning-vf0yggtoen76yyn?mode=doc)
 # Tarea 3: Generalización
 
 ## ¿Qué es la Generalización?
@@ -36,16 +37,14 @@ Un modelo con la complejidad adecuada (un polinomio de grado 4) aprende la forma
 
 - **Resultado:** La línea roja del modelo se parece mucho a la línea verde (la función verdadera). Este modelo hará buenas predicciones para nuevos puntos.
 
-![Buen Ajuste](https://i.imgur.com/6mZ8e3L.png) *(Referencia del notebook `ejemplo_generalizacion.ipynb`)*
-
+![Buen Ajuste](image/3_Generalizacion/1759513652339.png)
 #### Caso 2: Overfitting (Mala Generalización)
 
 Un modelo demasiado complejo (un polinomio de grado 15) intenta pasar por todos y cada uno de los puntos de entrenamiento.
 
 - **Resultado:** La línea roja se retuerce de forma errática para tocar todos los puntos azules. Aunque es perfecta para los datos de entrenamiento, se aleja drásticamente de la función verdadera. Este modelo hará predicciones muy malas para nuevos puntos.
 
-![Overfitting](https://i.imgur.com/6mZ8e3L.png) *(Referencia del notebook `ejemplo_generalizacion.ipynb`)*
-
+![Overfitting](image/3_Generalizacion/1759521029507.png)
 ## ¿Cómo se Logra una Buena Generalización?
 
 - **Usando un conjunto de validación/prueba:** Separar los datos en conjuntos de entrenamiento y prueba es crucial para poder medir objetivamente qué tan bien generaliza el modelo.
