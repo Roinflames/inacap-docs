@@ -1,0 +1,1 @@
+Quiero explicar y dar ejemplos de crisp-dm en clases.
