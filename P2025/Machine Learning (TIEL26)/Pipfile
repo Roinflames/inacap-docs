@@ -15,6 +15,7 @@ torchaudio = "*"
 sagemaker = "*"
 boto3 = "*"
 requests = "*"
+tensorflow = "*"
 
 [dev-packages]
 
