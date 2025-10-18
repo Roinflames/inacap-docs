@@ -107,15 +107,15 @@ Para evitar sobreajuste, se aplican penalizaciones a los pesos grandes:
 
 L2 regularization (Weight decay):
 
+```text
+L' = L + λ ∑(wi²)
 ```
-L' = L + λ ∑ sub i ( ​wi ** 2 )
-​```
 
 En PyTorch:
 
 ```python
 optimizer = torch.optim.Adam(model.parameters(), lr=0.001, weight_decay=1e-5)
-​```
+```
 
 ## 10. Guardar y cargar pesos
 Los pesos son lo que realmente “aprende” un modelo.
@@ -124,7 +124,7 @@ Puedes guardarlos y reutilizarlos fácilmente:
 ```python
 torch.save(modelo.state_dict(), 'pesos.pth')
 modelo.load_state_dict(torch.load('pesos.pth'))
-​```
+```
 
 ## En resumen
 | Concepto            | Descripción                                                        |
