@@ -1,0 +1,6 @@
+[Redes Neuronales](https://www.youtube.com/watch?v=jKCQsndqEGQ&t=604s)
+[CNN](https://www.youtube.com/watch?v=QzY57FaENXg)
+[LSTM]()
+[GAN]()
+[Autoencoders]()
+[Fine Tuning]()
