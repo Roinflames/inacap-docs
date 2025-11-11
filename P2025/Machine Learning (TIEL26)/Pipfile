@@ -16,6 +16,7 @@ sagemaker = "*"
 boto3 = "*"
 requests = "*"
 tensorflow = "*"
+unsloth = "*"
 
 [dev-packages]
 
