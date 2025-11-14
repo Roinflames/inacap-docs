@@ -1,0 +1,6 @@
+outs:
+- md5: 817bf529867bc3a2eada111aa601bb55.dir
+  size: 268777740
+  nfiles: 6
+  hash: md5
+  path: modelo_entrenado
