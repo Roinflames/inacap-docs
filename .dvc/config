@@ -1,0 +1,7 @@
+[core]
+    remote = gdrive
+['remote "gdrive"']
+    url = gdrive://1TsxAezo6McY8FmUPusyzfp-oXS63d0sG
+    gdrive_use_service_account = false
+    gdrive_service_account_json_file_path = ../config/gdrive-sa.json
+    gdrive_acknowledge_abuse = true
