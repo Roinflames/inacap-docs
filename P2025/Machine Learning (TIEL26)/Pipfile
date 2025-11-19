@@ -17,6 +17,8 @@ boto3 = "*"
 requests = "*"
 tensorflow = "*"
 unsloth = "*"
+huggingface-hub = "<1.0,>=0.23.2"
+evaluate = "==0.4.0"
 
 [dev-packages]
 
