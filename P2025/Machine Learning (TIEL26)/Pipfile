@@ -9,7 +9,6 @@ scikit-learn = "*"
 seaborn = "*"
 pandas = "*"
 tqdm = "*"
-torch = "*"
 torchvision = "*"
 torchaudio = "*"
 sagemaker = "*"
@@ -19,6 +18,11 @@ tensorflow = "*"
 unsloth = "*"
 huggingface-hub = "<1.0,>=0.23.2"
 evaluate = "==0.4.0"
+fastapi = "*"
+uvicorn = {extras = ["standard"], version = "*"}
+transformers = "*"
+torch = "*"
+pydantic = "*"
 
 [dev-packages]
 
