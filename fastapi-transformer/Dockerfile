@@ -8,7 +8,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 WORKDIR /app
 
 # Copiar requirements primero (mejor cache)
-COPY requirements.txt .
+COPY requirements.txt /app/requirements.txt
 
 # Instalar PyTorch CPU (sin GPU)
 RUN pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu
