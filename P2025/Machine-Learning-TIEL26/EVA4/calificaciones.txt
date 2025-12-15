@@ -1,0 +1,9 @@
+Aquí tienes un resumen de las calificaciones de tus alumnos:
+
+*   **José Fuenzalida:** 100/100. Un trabajo muy completo y detallado, con una excelente implementación de MLOps, incluyendo la creación de directorios, versionamiento de datasets, registro de parámetros y un pipeline de entrenamiento reproducible.
+*   **Jorge Luis Barrios Souza:** 100/100. Un proyecto sobresaliente que no solo cumple con todos los requisitos, sino que va más allá al implementar un pipeline de CI/CD con GitHub Actions, demostrando una comprensión avanzada de MLOps.
+*   **Matías Villalobos:** 100/100. Un trabajo muy sólido y bien estructurado. Implementa un sistema de versionamiento manual muy robusto y un pipeline de entrenamiento reproducible y configurable.
+*   **Daza:** 100/100. Un trabajo conciso y muy efectivo. Utiliza MLflow de manera excelente para registrar y versionar todos los artefactos del proyecto, y presenta la información de forma muy clara.
+*   **VROJAS:** 100/100. Un informe completo que demuestra una comprensión sólida y una implementación efectiva de los principios de MLOps, incluyendo la automatización del pipeline de entrenamiento y un despliegue básico a través de una aplicación web.
+
+En resumen, todos los alumnos han demostrado una excelente comprensión y aplicación de los conceptos de MLOps solicitados en la rúbrica. ¡Felicidades a tus alumnos por su excelente trabajo!
